@@ -2,57 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Simple Positioning</title>
+    <title>Positioning Exercise #18</title>
+    <link rel="stylesheet" type="text/css" href="css/solitaire.css"
 
-    <style>
-
-        .container {
-            width: 500px;
-            height: 500px;
-            background-color: lightcoral;
-        }
-
-        .box1 {
-            height: 100px;
-            width: 100px;
-            background-color: green;
-            position: fixed;
-            top: 50px;
-            right: 75px;
-            /*z-index: 3;*/
-        }
-
-        .box2 {
-            height: 100px;
-            width: 100px;
-            background-color: blue;
-            position: relative;
-            top: -50px;
-            left: 50px;
-            /*z-index: 2;*/
-        }
-
-        .box3 {
-            height: 100px;
-            width: 100px;
-            background-color: orange;
-            position: absolute;
-            top: 125px;
-            left: 25px;
-            /*z-index:1;*/
-        }
-
-
-    </style>
 </head>
-<body>
-
-<div class="container">
-
-    <div class="box1"></div>
-    <div class="box2"></div>
-    <div class="box3"></div>
-
+<body class="gradient">
+<div class="felt">
+    <img src="images/tendiamonds.png" class="ten" width="64" height="100" alt="Ten of Diamonds"/>
+    <img src="images/jackclubs.png" class="jack" width="64" height="100" alt="Jack of Clubs">
+    <img src="images/queenhearts.png" class="queen" width="64" height="100" alt="Queen of Hearts"/>
+    <img src="images/kingspades.png" class="king" width="64" height="100" alt="King of Spades"/>
+    <img src="images/card.png" class="back" width="64" height="100" alt="Back of card"/>
 </div>
 
 </body>
