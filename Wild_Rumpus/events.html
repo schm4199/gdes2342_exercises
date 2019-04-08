@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Events</title>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Karla" rel="stylesheet">
+
+    <style>
+        .header {
+            width: 308px;
+            height: 133px;
+            margin-left: 82px;
+        }
+
+        .cat3 {
+            height: 40px;
+            margin-left: 190px;
+            margin-top: 40px;
+            position: absolute;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: 'Amatic SC', cursive;
+        }
+
+        h2 {
+            text-align: center;
+            font-family: 'Karla', sans-serif;
+            font-size: small;
+            margin-top: -10px;
+        }
+
+        h3 {
+            text-align: center;
+            font-family: 'Karla', sans-serif;
+            font-size: small;
+            color: white;
+        }
+
+        .sign {
+            position: absolute;
+            height: 150px;
+            margin-top: 40px;
+            margin-left: 60px;
+        }
+
+        .door {
+            width: 308px;
+            height: 445px;
+            background-color: #7A4183;
+            border: white solid 5px;
+            margin-left: 82px;
+        }
+
+        .upper_frame {
+            width: 369px;
+            height: 29px;
+            background-color: #7A4183;
+            margin-left: 56px;
+        }
+
+        .window1 {
+            width: 76px;
+            height: 76px;
+            background-color: #9991A4;
+            opacity: 0.6;
+            box-shadow: inset 26px 17px 26px rgba(0, 0, 0, 0.25);
+            margin-left: 20px;
+            margin-top: 20px;
+            position: absolute;
+        }
+
+        .window2 {
+            width: 76px;
+            height: 76px;
+            background-color: #9991A4;
+            opacity: 0.6;
+            box-shadow: inset 26px 17px 26px rgba(0, 0, 0, 0.25);
+            margin-left: 116px;
+            margin-top: 20px;
+            position: absolute;
+        }
+
+        .window3 {
+            width: 76px;
+            height: 76px;
+            background-color: #9991A4;
+            opacity: 0.6;
+            box-shadow: inset 26px 17px 26px rgba(0, 0, 0, 0.25);
+            margin-left: 212px;
+            margin-top: 20px;
+            position: absolute;
+        }
+
+        .window_big {
+            width: 268px;
+            height: 329px;
+            background-color: #9991A4;
+            opacity: 0.6;
+            box-shadow: inset 26px 17px 26px rgba(0, 0, 0, 0.25);
+            margin-top: 116px;
+            margin-left: 20px;
+        }
+
+        .lower_frame {
+            width: 308px;
+            height: 71px;
+            background-color: #7A4183;
+            position: absolute;
+            margin-left: 87px;
+            margin-top: -5px;
+        }
+
+        .left_frame {
+            width: 26px;
+            height: 521px;
+            background-color: #7A4183;
+            position: absolute;
+            margin-left: 56px;
+        }
+
+        .right_frame {
+            width: 26px;
+            height: 521px;
+            background-color: #7A4183;
+            position: absolute;
+            margin-left: 399px;
+        }
+
+
+        .navigation {
+            width: 700px;
+            height: 53px;
+            background-color: #7A4183;
+            position: absolute;
+            margin-left: 590px;
+        }
+
+        .floatleft {
+            float: left;
+        }
+
+        .inner {
+            font-family: 'Karla', sans-serif;
+            color: white;
+            padding: 28px;
+            margin-left: 30px;
+            margin-top: -28px;
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+            font-family: 'Karla', sans-serif;
+            color: white;
+        }
+
+        a:hover {
+            color: #9991A4;
+        }
+
+        a:active {
+            color: black;
+        }
+
+        .hours {
+            font-family: 'Karla', sans-serif;
+            color: white;
+            padding: 10px;
+            font-size: small;
+            text-align: center;
+            margin-left: 56px;
+            margin-top: 100px;
+            position: absolute;
+        }
+
+        .footer {
+            text-align: center;
+            color: #7A4183;
+            text-size: x-small;
+            margin-top: 100px;
+        }
+
+
+        /* Slideshow container */
+        .slideshow-container {
+            width: 700px;
+            height: 470px;
+            background-color: #9991A4;
+            position: absolute;
+            margin-left: 590px;
+            margin-top: -400px;
+        }
+
+        /* Hide the images by default */
+        .mySlides {
+            display: none;
+            margin-top: 300px;
+            margin-left: -30px;
+        }
+
+        /* Next & previous buttons */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            margin-left: 10px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 10px;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Caption text */
+        .text1 {
+            width: 100px;
+            color: #f2f2f2;
+            font-size: 15px;
+            font-family: 'Karla', sans-serif;
+            position: absolute;
+            width: 100%;
+            margin-left: 400px;
+            margin-top: -300px;
+        }
+
+        .text2 {
+            color: #f2f2f2;
+            font-size: 15px;
+            font-family: 'Karla', sans-serif;
+            position: absolute;
+            width: 100%;
+            margin-left: 400px;
+            margin-top: -200px;
+        }
+
+        .text3 {
+            color: #f2f2f2;
+            font-size: 15px;
+            font-family: 'Karla', sans-serif;
+            position: absolute;
+            width: 100%;
+            margin-left: 400px;
+            margin-top: -360px;
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 15px;
+            position: absolute;
+            margin-left: 350px;
+            margin-top: 140px;
+        }
+
+        /* Fading animation */
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @-webkit-keyframes fade {
+            from {
+                opacity: .4
+            }
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+            to {
+                opacity: 1
+            }
+        }
+
+        .event1 {
+            margin-top: -250px;
+            margin-left: 100px;
+        }
+
+        .event2 {
+            margin-top: -250px;
+            margin-left: 90px;
+
+        }
+
+        .event3 {
+            margin-top: -250px;
+            margin-left: 100px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <img class="cat3" src="3-cat-clipart-10.png">
+    <h1>
+        Wild
+        <br>
+        Rumpus
+    </h1>
+    <h2>
+        Books For Young Readers
+    </h2>
+</div>
+
+<div class="navigation">
+    <div class="inner floatleft">
+        <p><a href="index.html">Home</a></p>
+    </div>
+    <div class="inner floatleft">
+        <p><a href="about.html">About</a></p>
+    </div>
+    <div class="inner floatleft">
+        <p><a href="books.html">Books</a></p>
+    </div>
+    <div class="inner floatleft">
+        <p><a href="events.html">Events</a></p>
+    </div>
+    <div class="inner floatleft">
+        <p>Account</p>
+    </div>
+</div>
+</div>
+<div class="upper_frame"></div>
+<div class="left_frame"></div>
+<div class="right_frame"></div>
+<div class="door">
+    <div class="window1"></div>
+    <div class="window2"></div>
+    <div class="window3"></div>
+    <div class="window_big">
+        <div>
+            <img class="sign" src="sign.png">
+            <p class="hours">
+                Monday: 10am-5pm <br>
+                Tues-Friday: 10am-8pm <br>
+                Saturday: 10am-5pm <br>
+                Sunday: 12-5pm <br>
+            </p>
+        </div>
+    </div>
+</div>
+<div class="lower_frame"></div>
+<div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+        <div class="numbertext">1/3</div>
+        <img class="event1" src="Becca%20Ansari.jpg" style="width:35%">
+        <div class="text1">Rebecca K.S. Ansari <br> Saturday, April 6th, 1PM<br><br>Wild Rumpus welcomes author<br> and
+            Minnesotan Rebecca K.S. Ansari! <br> We're crazy about her debut novel,<br> The Missing Piece of Charlie
+            O'Reilly,<br> a
+            fantasy about family, love, loss, and <br> the power of stories. We're sure you'll <br> love it, too.
+
+        </div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">2/3</div>
+        <img class="event2" src="SaymoukdaandCoriBIG.jpg" style="width:40%">
+        <div class="text2">Saymoukda Duangphouxay Vongsay <br> & Cori Nakamura Lin <br> Saturday, April 13th,
+            11AM<br><br>Join author Saymoukda Duangphouxay <br> Vongsay and illustrator Cori Nakamura <br> Lin for a
+            reading and
+            discussion of<br> their gorgeous book, When Everything <br> Was Everything, Minnesota's first <br> Lao
+            American picture
+            book.
+        </div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img class="event3" src="Roda%20Ahmed.jpg" style="width:35%">
+        <div class="text3">Roda Ahmed <br> Saturday, April 20th, 11AM <br><br> We are honored to welcome Roda Ahmed,<br>
+            author of Mae Among the Stars, to Wild <br>Rumpus! Her beautiful picture book <br> about Mae Jemison, the
+            first
+            African <br> American woman to travel in space, has <br> received much well-deserved acclaim <br> and is a
+            perfect book to
+            inspire young <br> feminists, regardless of gender.<br><br>Roda Ahmed is a Norwegian author and <br> columnist
+            born in Hargeisa, Somalia. Roda <br> is the bestselling author of Forberedelsen <br> (The Preparations). Mae Among the
+            Stars<br> is her first children’s book. She can speak <br> five languages: Somali, Arabic, Norwegian,<br> English, and
+            French. Roda lives in LA with <br> her husband and two children.<br> For more info check out www.rodaworld.com.
+
+        </div>
+    </div>
+
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    }
+</script>
+
+</div><!-- closing container div-->
+
+<div class="footer">
+    <p>2720 West 43rd Street Minneapolis, MN 55410 <br> info@wildrumpusbooks.com <br> 612.920.5005</p>
+</div>
+</body>
+</html>
